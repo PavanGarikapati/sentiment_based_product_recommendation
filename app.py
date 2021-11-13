@@ -76,8 +76,13 @@ from numpy import *
 from flask import Flask, render_template, request
 
 # Load the files
-user_prod_final_rating = pd.read_pickle("user_prod_final_rating_df.pkl")
-df_prod_reviews_sentiment = pd.read_pickle("df_prod_reviews_sentiment_df.pkl")
+user_prod_final_rating = pd.read_pickle("user_prod_final_rating_df2.pkl",compression='zip')
+#user_prod_final_rating = pd.read_csv("user_prod_final_rating_df.csv.gz", compression='gzip')
+#user_prod_final_rating.drop(columns=["reviews_username"],inplace=True)
+
+df_prod_reviews_sentiment = pd.read_pickle("df_prod_reviews_sentiment_df2.pkl",compression='zip')
+#df_prod_reviews_sentiment = pd.read_csv("df_prod_reviews_sentiment.csv.gz", compression='gzip')
+#df_prod_reviews_sentiment.drop(columns=["Unnamed: 0"],inplace=True)
 rf_pca_tuned_range = pickle.load(open("rf_pca_tuned_range.pkl","rb"))
 app = Flask(__name__)
 
