@@ -23,4 +23,3 @@ tempora==4.1.2
 textblob==0.15.3
 tokenizers==0.10.3
 xgboost==1.5.0
-re==2.2.1
