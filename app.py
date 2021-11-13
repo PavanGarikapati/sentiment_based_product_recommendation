@@ -21,9 +21,9 @@ from textblob import TextBlob # spell correction
 
 
 import nltk
-nltk.download('punkt')
-nltk.download('stopwords')
-nltk.download('wordnet')
+#nltk.download('punkt')
+#nltk.download('stopwords')
+#nltk.download('wordnet')
 
 import string # remove punctuation
 import re
